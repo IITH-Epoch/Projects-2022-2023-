@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% if not extension %}
+        <h2>Please upload an image file with any of following formats: </h2>
+        <center>
+        <ul class="list-group">
+            <li class="list-group-item">.jpg</li>
+            <li class="list-group-item">.jpeg</li>
+            <li class="list-group-item">.png</li>
+            <li class="list-group-item">.jpe</li>
+        </ul>
+        <br>
+        <a class="btn btn-primary" href="" role="button">Upload Another Image</a>
+    </center>
+    {% else %}
+    {% if result_image %}
+    <div class="result">
+        {%if resize%}
+            <h3>Your image was resized</h3>
+        {%endif%}
+        {% if faces == 1 %}
+        <h2> 1 Face Detected </h2>
+        {% else %}
+        <h2>{{faces}} Faces Detected</h2>
+        {% endif %}
+        <br>
+        <img src="{{MEDIA_URL}}{{result_image}}" alt="resulting-img">
+        <br>
+        <br>
+        <a class="btn btn-primary" href="" role="button">Upload Other Image</a>
+    </div>
+    {%else%}
+    <form method = 'POST' enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="upload-img" class="upload">Upload the image:</label>
+            <input type="file" class="form-control-file" name="picture" accept="image/*" capture="camera">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {%endif%}
+    {%endif%}
+{% endblock %}
