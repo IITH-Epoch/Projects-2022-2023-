@@ -1,0 +1,3 @@
+Few shot learning is learning from few examples. Say you have 2 images from each class from the FashionMNIST dataset. You want your model to learn to differentiate between dissimiliar images. To achieve this you first train a model on some similar dataset to learn an embedding layer. I used MNIST dataset, my embedding layer is the layer consisting of logits. From there I fine tune the dataset on the given samples from fashionMNIST dataset.
+
+I also tried another approach that is to add another fc layer and the gradient updates will happen only on this added layer.
