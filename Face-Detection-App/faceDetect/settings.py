@@ -7,7 +7,7 @@ SECRET_KEY = "django-insecure-!mftt20(x3043u_h!xex&ott%a%5f2w9-&&+ki7u#v1@h^et-*
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1','facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app/home']
 
