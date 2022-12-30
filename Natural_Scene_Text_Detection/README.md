@@ -1,12 +1,12 @@
-#Natural Scene Text Detector
+# Natural Scene Text Detector
 
 This Project was developed by Aayush Kumar, Core Member of Epoch (2022-2023)
 
-##About the project:
+## About the project:
 
 This project was made for detecting and recognizing text in natural scene. Major libraries used are OpenCV and Tesseract. It also uses pre-trained east model for detecting regions of text.
 
-##Setup:
+## Setup:
 
 To run this file, we need to download tesseract library and a pre-trained east model.
 
