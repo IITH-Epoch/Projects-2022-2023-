@@ -1,0 +1,8 @@
+jupyter notebook 6.4.8
+
+gym == 0.21.0 -> Mandatory
+
+numpy 1.23.0
+matplotlib 3.5.2
+ipython 7.31.1
+
