@@ -1,8 +1,8 @@
 # Agent Playing In Frozen Lake Environment
 
-This Project was developed by [M Charan]{https://github.com/Charanyash}, Core Member of [Epoch]{https://github.com/IITH-Epoch} (2022-2023). 
+This Project was developed by [M Charan](https://github.com/Charanyash), Core Member of [Epoch](https://github.com/IITH-Epoch) (2022-2023). 
 
-The aim of the project is to develop an agent using RL algorithms to learn policies in the [Frozen Lake environment]{https://www.gymlibrary.dev/environments/toy_text/frozen_lake/} from [OpenAI gym]{https://www.gymlibrary.dev/}.  
+The aim of the project is to develop an agent using RL algorithms to learn policies in the [Frozen Lake environment](https://www.gymlibrary.dev/environments/toy_text/frozen_lake/) from [OpenAI gym](https://www.gymlibrary.dev/).  
 
 ## Frozen Lake
 Frozen Lake is a toy text environment from OpenAI gym where the agent starts at S and the aim is to reach the goal G in minimum number of steps.
