@@ -1,4 +1,4 @@
-# Handwritten digit recognition using canvas
+# Handwritten digit recognition canvas
 This Project was developed by Anshul Sangrame, Core Member of Epoch (2022-2023)
 ## About the Project:
 This Project recogonizes single digit number drawn on canvas. Major python libraries used in this project are tensorflow for developing the deep learning model, tkinter module for GUI and openCV and Pillow for preprocessing of image
