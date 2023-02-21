@@ -7,7 +7,7 @@ The goal is to use OpenAI Gym's Taxi-v3 environment and implement an algorithm t
 #### Taxi-v3 Environment Description : -
 The environment map looks something like the figure below <br/>
 
-<img src="https://user-images.githubusercontent.com/102598808/210063899-901c850b-7e11-444f-98db-d4199a0bd875.png" width="40%" height="40%">
+<img src="https://miro.medium.com/max/782/1*wLUSa716Be2cS3E3t3AjvA.png" width="40%" height="40%">
 
 **States**: There are 500 possible states, corresponding to 25 possible grid locations, 5 locations for the passenger, and 4 destinations. <br/>
 **Actions**: There are 6 possible actions, corresponding to moving North, East, South, or West, picking up the passenger, and dropping off the passenger. <br/>
