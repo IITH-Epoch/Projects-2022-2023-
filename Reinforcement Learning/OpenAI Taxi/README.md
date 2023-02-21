@@ -5,7 +5,7 @@ This project was developed by [Donal Loitam](https://github.com/Donal-08), Club 
 The goal is to use OpenAI Gym's Taxi-v3 environment and implement an algorithm to teach a taxi agent to navigate a small (5x5)gridworld. <br/>
 
 #### Taxi-v3 Environment Description : -
-The environment map looks something like the figure below <br/>
+The environment map looks something like the figure below. <br/>
 
 <img src="https://miro.medium.com/max/782/1*wLUSa716Be2cS3E3t3AjvA.png" width="40%" height="40%">
 
