@@ -26,12 +26,12 @@ python3 setup.py develop
 ```
 roscore
 ```
-2. Move to 'tools' directory and run test_ros.py (pretrained model: ../pt/livox_model_1.pt or ../pt/livox_model_2.pt).
+2. Move to 'tools' directory and run test_ros.py (pretrained model: ../pt/object_model_1.pt or ../pt/object_model_2.pt).
 ```
 cd tools
-python3 test_ros.py --pt ../pt/livox_model_1.pt
+python3 test_ros.py --pt ../pt/object_model_1.pt
 ```
-3. Play rosbag. (Please adjust the ground plane to 0m and keep it horizontal. The topic of pointcloud2 should be /livox/lidar)
+3. Play rosbag. (Please adjust the ground plane to 0m and keep it horizontal. The topic of pointcloud2 should be /object/lidar)
 ```
 rosbag play [bag path]
 ```
