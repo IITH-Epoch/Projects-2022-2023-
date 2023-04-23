@@ -1,0 +1,51 @@
+import joblib
+model = joblib.load('model.pkl')
+
+crop_img(path_to_photo):
+    img = cv2.imread(path_to_photo)
+    img = cv2.resize(img, (512, 512))
+    out = []
+    for i in range(8):
+        temp = []
+        for j in range(8):
+            temp.append(img[i*64:(i+1)*64,j*64:(j+1)*64])
+        out.append(temp)
+    return out
+
+def get_array(path_to_photo):
+    # 5 dimensional array of 64x(size of one cropped image)
+    imgs = crop_img(path_to_photo)
+    arr = np.zeros((8,8))
+    for i in range(8):
+        for j in range(8):
+            arr[i][j] = model.predict(img)
+    return arr
+    
+
+m = ['a','b','c','d','e','f','g','h']
+prev = [['W','W','W','W','W','W','W','W'],
+       ['W','W','W','W','W','W','W','W'],
+       ['a','a','a','a','a','a','a','a'],
+       ['a','a','a','a','a','a','a','a'],
+       ['a','a','a','a','a','a','a','a'],
+       ['a','a','a','a','a','a','a','a'],
+       ['B','B','B','B','B','B','B','B'],
+       ['B','B','B','B','B','B','B','B']
+       ]
+t = 10
+while (True):
+    time.sleep(t)
+    ! click photo.jpg
+    arr = get_array(path_to_photo)
+    ! remove photo.jpg
+    move = get_move(arr,prev)
+    board.move(move)
+    best_move = get_best_move_from_board()
+    if (best_move == None):
+        print("Check Mate")
+        break
+    borad.move(best_move)
+    hand.move(best_move)
+    arr = update_array(arr,best_move)
+    prev = arr
+    t += 0.4
