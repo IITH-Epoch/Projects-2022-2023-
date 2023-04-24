@@ -1,3 +1,4 @@
+This project was made by [Aaryan](https://github.com/aaryan200), member of Epoch (2022-23)
 # Face Detection Web App
 A simple django app to detect faces in an image using mediapipe and opencv.
 Please upload image files of any of the following formats:
