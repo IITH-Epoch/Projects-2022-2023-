@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% if not extension %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="aligns-items-center justify-content-center">
+        <h2 class="text-center">Please upload an image file with any of following formats: </h2>
+            <br>
+            <ul class="list-group mx-auto w-25">
+                <li class="list-group-item">.jpg</li>
+                <li class="list-group-item">.jpeg</li>
+                <li class="list-group-item">.png</li>
+                <li class="list-group-item">.jpe</li>
+            </ul>
+            <br>
+            <div class="text-center">
+                <a class="btn btn-primary" href="" role="button">Upload Another Image</a>
+            </div>
+        </div>
+    {% else %}
+    {% if result_image %}
+    <div class="aligns-items-center justify-content-center">
+        <br>
+        <br>
+        {%if resize%}
+            <h3 class="text-center">Your image was resized</h3>
+        {%endif%}
+        {% if faces == 1 %}
+        <h2 class="text-center"> 1 Face Detected </h2>
+        {% else %}
+        <h2 class="text-center">{{faces}} Faces Detected</h2>
+        {% endif %}
+        <br>
+        <img src="{{MEDIA_URL}}{{result_image}}" alt="resulting-img" class="rounded mx-auto d-block">
+        <br>
+        <br>
+        <div class="text-center">
+            <a class="btn btn-primary" href="" role="button">Upload Other Image</a>
+        </div>
+    </div>
+    {% else %}
+    <div id="mycarousel" class="carousel slide main-thing" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="carousel__img" src="../static/images/background.jpeg" alt="First slide" class="img-fluid" />
+                <div class="carousel__caption carousel-caption">
+                    <div>
+                        <div class="face-image">
+                            <form method="POST" enctype="multipart/form-data" action="">
+                                {% csrf_token %}
+    
+                                <div class="form-group">
+                                    <label for="upload-img">
+                                        <h3 class="upload_img ">Upload the image:</h3>
+                                    </label>
+                                    <input type="file" class="form-control-file" name="picture" accept="image/*"
+                                        capture="camera" />
+                                </div>
+                                <br />
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    {%endif%}
+    {%endif%}
+{% endblock %}
