@@ -11,8 +11,9 @@ env = StockTradingEnv(3_000_000, 'csv', 'AAPL_daily_update.csv')
 print(env.observation_space)
 print(env.action_space)
 
-observations = env.reset()
+env.reset()
 total_reward = 0
+done = False
 
 while not done:
     action = env.action_space.sample()
