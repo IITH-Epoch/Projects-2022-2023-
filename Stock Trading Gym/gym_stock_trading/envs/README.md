@@ -13,9 +13,9 @@ print(env.action_space)
 
 env.reset()
 total_reward = 0
-done = False
+terminated = False
 
-while not done:
+while not terminated:
     action = env.action_space.sample()
     observations, reward, terminated, truncated, info = env.step(action)
     total_reward += reward
