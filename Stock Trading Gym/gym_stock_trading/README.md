@@ -1,0 +1,2 @@
+# Registration
+The lone environment `StockTradingEnv` that we currently have has been registered under the id of `StockTrading-v0`. This will allow users of the package to use `gym.make` to directly build the environment. 
