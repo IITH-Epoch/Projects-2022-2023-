@@ -1,0 +1,6 @@
+The code functions inside an infinite while loop.
+To exit the code press stop button in VScode
+To run code first install required python packages
+  1) pyautogui
+  2) mediapipe
+  3) cv2
