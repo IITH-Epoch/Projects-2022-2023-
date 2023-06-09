@@ -24,5 +24,5 @@ The algorithm used for training the reinforcement learning agent:
 | Average timesteps | 12.96 |
 
 ### Possible Improvements :-
-- Use DeepQ Learning and compare its performance with Qlearning
+- Use DeepQ Learning and compare its performance with Qlearning.
 - Tune the hyperparameters 
